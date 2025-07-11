@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>搜搜仿站</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    #logo {
+      width: 280px;
+    }
+
+    .search-box {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search-form {
+      display: flex;
+      border: 2px solid black;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    input[type="text"] {
+      width: 400px;
+      height: 42px;
+      font-size: 16px;
+      padding: 0 px;
+      border: none;
+      outline: none;
+      transition: box-shadow 0.2s, border 0.2s;
+    }
+     input[type="text"]:hover {
+      box-shadow: 0 0 6px rgba(36, 114, 210, 0.648);
+    }
+
+    input[type="submit"] {
+      height: 42px;
+      width: 100px;
+      font-size: 16px;
+      background-color: #157efb;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0e5ec9;
+    }
+    input[type="submit"]::selection {
+      background: none;
+    }
+
+     @media (max-width: 600px) {
+      input[type="text"] {
+        font-size: 14px;
+      }
+
+      input[type="submit"] {
+        width: 80px;
+        font-size: 14px;
+      }
+
+      body {
+        padding-top: 60px;
+      }
+
+      #logo {
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 替代 logo 图片 -->
+  <h1><img id="logo" src="./sosologo.png" alt="logo"></h1>
+
+  <!-- 搜索框 -->
+  <div class="search-box">
+    <form action="https://www.sogou.com/web" method="GET">
+      <input type="text" name="query" placeholder="请输入搜索内容" required>
+      <input type="submit" value="搜搜">
+    </form>
+  </div>
+
+</body>
+</html>
